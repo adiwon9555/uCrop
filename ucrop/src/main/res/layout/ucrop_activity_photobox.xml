@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Crop the image to fit only question."
-            android:textColor="@color/ucrop_color_widget"
+            android:textColor="@color/ucrop_color_toolbar_widget"
             android:textSize="20dp"/>
 
         <ImageView
