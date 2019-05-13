@@ -30,6 +30,14 @@
         android:layout_above="@+id/wrapper_controls"
         android:layout_below="@+id/toolbar"
         android:background="@color/ucrop_color_crop_background">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Crop the image to fit only question."
+            android:textColor="@color/ucrop_color_widget"
+            android:textSize="20dp"/>
 
         <ImageView
             android:id="@+id/image_view_logo"

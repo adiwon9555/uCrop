@@ -463,7 +463,7 @@ public class UCrop {
          * @param text - desired text for Toolbar title
          */
         public void setToolbarTitle(@Nullable String text) {
-            mOptionBundle.putString(EXTRA_UCROP_TITLE_TEXT_TOOLBAR, "changed master - he - he - he");
+            mOptionBundle.putString(EXTRA_UCROP_TITLE_TEXT_TOOLBAR, text);
         }
 
         /**
