@@ -294,11 +294,16 @@ public class UCropActivity extends AppCompatActivity {
             mWrapperStateAspectRatio.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    rotateByAngle(90);
+                    cropAndSaveImage();
                 }
             });
             mWrapperStateRotate = findViewById(R.id.state_rotate);
-            mWrapperStateRotate.setOnClickListener(mStateClickListener);
+            mWrapperStateAspectRatio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    rotateByAngle(90);
+                }
+            });
             mWrapperStateScale = findViewById(R.id.state_scale);
             mWrapperStateScale.setOnClickListener(mStateClickListener);
 
