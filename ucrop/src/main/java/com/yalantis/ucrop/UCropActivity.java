@@ -298,7 +298,7 @@ public class UCropActivity extends AppCompatActivity {
                 }
             });
             mWrapperStateRotate = findViewById(R.id.state_rotate);
-            mWrapperStateAspectRatio.setOnClickListener(new View.OnClickListener() {
+            mWrapperStateRotate.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     rotateByAngle(90);

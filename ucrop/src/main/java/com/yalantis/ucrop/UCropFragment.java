@@ -137,9 +137,21 @@ public class UCropFragment extends Fragment {
             View.inflate(getContext(), R.layout.ucrop_controls, photoBox);
 
             mWrapperStateAspectRatio = view.findViewById(R.id.state_aspect_ratio);
-            mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
+            // mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
+            mWrapperStateAspectRatio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    cropAndSaveImage();
+                }
+            });
             mWrapperStateRotate = view.findViewById(R.id.state_rotate);
-            mWrapperStateRotate.setOnClickListener(mStateClickListener);
+            // mWrapperStateRotate.setOnClickListener(mStateClickListener);
+            mWrapperStateRotate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    rotateByAngle(90);
+                }
+            });
             mWrapperStateScale = view.findViewById(R.id.state_scale);
             mWrapperStateScale.setOnClickListener(mStateClickListener);
 
