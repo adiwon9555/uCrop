@@ -155,13 +155,13 @@ public class UCropFragment extends Fragment {
             mWrapperStateScale = view.findViewById(R.id.state_scale);
             mWrapperStateScale.setOnClickListener(mStateClickListener);
 
-            mLayoutAspectRatio = view.findViewById(R.id.layout_aspect_ratio);
-            mLayoutRotate = view.findViewById(R.id.layout_rotate_wheel);
-            mLayoutScale = view.findViewById(R.id.layout_scale_wheel);
+            // mLayoutAspectRatio = view.findViewById(R.id.layout_aspect_ratio);
+            // mLayoutRotate = view.findViewById(R.id.layout_rotate_wheel);
+            // mLayoutScale = view.findViewById(R.id.layout_scale_wheel);
 
-            setupAspectRatioWidget(args, view);
-            setupRotateWidget(view);
-            setupScaleWidget(view);
+            // setupAspectRatioWidget(args, view);
+            // setupRotateWidget(view);
+            // setupScaleWidget(view);
             setupStatesWrapper(view);
         }
     }
@@ -320,40 +320,40 @@ public class UCropFragment extends Fragment {
             aspectRatioList.add(new AspectRatio(null, 16, 9));
         }
 
-        LinearLayout wrapperAspectRatioList = view.findViewById(R.id.layout_aspect_ratio);
+        // LinearLayout wrapperAspectRatioList = view.findViewById(R.id.layout_aspect_ratio);
 
-        FrameLayout wrapperAspectRatio;
-        AspectRatioTextView aspectRatioTextView;
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
-        lp.weight = 1;
-        for (AspectRatio aspectRatio : aspectRatioList) {
-            wrapperAspectRatio = (FrameLayout) getLayoutInflater().inflate(R.layout.ucrop_aspect_ratio, null);
-            wrapperAspectRatio.setLayoutParams(lp);
-            aspectRatioTextView = ((AspectRatioTextView) wrapperAspectRatio.getChildAt(0));
-            aspectRatioTextView.setActiveColor(mActiveWidgetColor);
-            aspectRatioTextView.setAspectRatio(aspectRatio);
+        // FrameLayout wrapperAspectRatio;
+        // AspectRatioTextView aspectRatioTextView;
+        // LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
+        // lp.weight = 1;
+        // for (AspectRatio aspectRatio : aspectRatioList) {
+        //     wrapperAspectRatio = (FrameLayout) getLayoutInflater().inflate(R.layout.ucrop_aspect_ratio, null);
+        //     wrapperAspectRatio.setLayoutParams(lp);
+        //     aspectRatioTextView = ((AspectRatioTextView) wrapperAspectRatio.getChildAt(0));
+        //     aspectRatioTextView.setActiveColor(mActiveWidgetColor);
+        //     aspectRatioTextView.setAspectRatio(aspectRatio);
 
-            wrapperAspectRatioList.addView(wrapperAspectRatio);
-            mCropAspectRatioViews.add(wrapperAspectRatio);
-        }
+        //     wrapperAspectRatioList.addView(wrapperAspectRatio);
+        //     mCropAspectRatioViews.add(wrapperAspectRatio);
+        // }
 
-        mCropAspectRatioViews.get(aspectRationSelectedByDefault).setSelected(true);
+        // mCropAspectRatioViews.get(aspectRationSelectedByDefault).setSelected(true);
 
-        for (ViewGroup cropAspectRatioView : mCropAspectRatioViews) {
-            cropAspectRatioView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mGestureCropImageView.setTargetAspectRatio(
-                            ((AspectRatioTextView) ((ViewGroup) v).getChildAt(0)).getAspectRatio(v.isSelected()));
-                    mGestureCropImageView.setImageToWrapCropBounds();
-                    if (!v.isSelected()) {
-                        for (ViewGroup cropAspectRatioView : mCropAspectRatioViews) {
-                            cropAspectRatioView.setSelected(cropAspectRatioView == v);
-                        }
-                    }
-                }
-            });
-        }
+        // for (ViewGroup cropAspectRatioView : mCropAspectRatioViews) {
+        //     cropAspectRatioView.setOnClickListener(new View.OnClickListener() {
+        //         @Override
+        //         public void onClick(View v) {
+        //             mGestureCropImageView.setTargetAspectRatio(
+        //                     ((AspectRatioTextView) ((ViewGroup) v).getChildAt(0)).getAspectRatio(v.isSelected()));
+        //             mGestureCropImageView.setImageToWrapCropBounds();
+        //             if (!v.isSelected()) {
+        //                 for (ViewGroup cropAspectRatioView : mCropAspectRatioViews) {
+        //                     cropAspectRatioView.setSelected(cropAspectRatioView == v);
+        //                 }
+        //             }
+        //         }
+        //     });
+        // }
     }
 
     private void setupRotateWidget(View view) {
@@ -471,9 +471,9 @@ public class UCropFragment extends Fragment {
         mWrapperStateRotate.setSelected(stateViewId == R.id.state_rotate);
         mWrapperStateScale.setSelected(stateViewId == R.id.state_scale);
 
-        mLayoutAspectRatio.setVisibility(stateViewId == R.id.state_aspect_ratio ? View.VISIBLE : View.GONE);
-        mLayoutRotate.setVisibility(stateViewId == R.id.state_rotate ? View.VISIBLE : View.GONE);
-        mLayoutScale.setVisibility(stateViewId == R.id.state_scale ? View.VISIBLE : View.GONE);
+        // mLayoutAspectRatio.setVisibility(stateViewId == R.id.state_aspect_ratio ? View.VISIBLE : View.GONE);
+        // mLayoutRotate.setVisibility(stateViewId == R.id.state_rotate ? View.VISIBLE : View.GONE);
+        // mLayoutScale.setVisibility(stateViewId == R.id.state_scale ? View.VISIBLE : View.GONE);
 
         if (stateViewId == R.id.state_scale) {
             setAllowedGestures(0);

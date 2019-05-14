@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <FrameLayout
+    <!-- <FrameLayout
         android:id="@+id/wrapper_controls"
         android:layout_width="match_parent"
         android:layout_height="@dimen/ucrop_height_wrapper_controls"
@@ -22,8 +23,7 @@
         <include
             android:id="@+id/layout_scale_wheel"
             layout="@layout/ucrop_layout_scale_wheel"/>
-
-    </FrameLayout>
+    </FrameLayout> -->
 
     <ImageView
         android:layout_width="match_parent"
@@ -43,34 +43,73 @@
 
         <FrameLayout
             android:id="@+id/state_scale"
-            style="@style/ucrop_WrapperIconState">
+            style="@style/ucrop_WrapperIconState"
+            android:background="@color/bg_color_black">
 
             <ImageView
                 android:id="@+id/image_view_state_scale"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_scale"/>
-
+                android:src="@drawable/camera"/>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:lines="1"
+                        android:text="Re-take photo"
+                        android:textColor="@color/control_text"/>
+            </RelativeLayout>
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/state_aspect_ratio"
-            style="@style/ucrop_WrapperIconState">
+            style="@style/ucrop_WrapperIconCrop"
+            android:background="@color/bg_color_black">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/background_border">
 
-            <ImageView
-                android:id="@+id/image_view_state_aspect_ratio"
-                style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_done"/>
+                <ImageView
+                    android:id="@+id/image_view_state_aspect_ratio"
+                    style="@style/ucrop_ImageViewWidgetIcon"
+                    android:src="@drawable/ucrop_ic_done" />
+            </RelativeLayout>
 
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/state_rotate"
-            style="@style/ucrop_WrapperIconState">
+            style="@style/ucrop_WrapperIconState"
+            android:background="@color/bg_color_black">
 
             <ImageView
                 android:id="@+id/image_view_state_rotate"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_rotate"/>
+                android:src="@drawable/ucrop_ic_rotate" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:lines="1"
+                        android:text="Rotate"
+                        android:textColor="@color/control_text"/>
+            </RelativeLayout>
 
         </FrameLayout>
 

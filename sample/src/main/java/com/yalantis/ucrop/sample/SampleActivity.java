@@ -470,9 +470,6 @@ public class SampleActivity extends BaseActivity implements UCropFragmentCallbac
         toolbar.setBackgroundColor(mToolbarColor);
         toolbar.setTitleTextColor(mToolbarWidgetColor);
         toolbar.setVisibility(View.VISIBLE);
-        final TextView toolbarTitle = toolbar.findViewById(R.id.toolbar_title);
-        toolbarTitle.setTextColor(mToolbarWidgetColor);
-        toolbarTitle.setText(mToolbarTitle);
 
         // Color buttons inside the Toolbar
         Drawable stateButtonDrawable = ContextCompat.getDrawable(getBaseContext(), mToolbarCancelDrawable);

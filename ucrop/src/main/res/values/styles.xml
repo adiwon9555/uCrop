@@ -9,12 +9,29 @@
         <item name="android:duplicateParentState">true</item>
     </style>
 
+    <style name="ucrop_ImageViewWidgetControlIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
     <style name="ucrop_WrapperIconState">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:clickable">true</item>
+         <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="ucrop_WrapperIconCrop">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+         <item name="android:paddingBottom">3dp</item>
     </style>
 
     <style name="ucrop_WrapperRotateButton">
