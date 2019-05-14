@@ -59,7 +59,7 @@
             <ImageView
                 android:id="@+id/image_view_state_aspect_ratio"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_crop"/>
+                android:src="@drawable/ucrop_ic_done"/>
 
         </FrameLayout>
 

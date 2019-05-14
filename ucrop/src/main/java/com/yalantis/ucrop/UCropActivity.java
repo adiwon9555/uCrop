@@ -290,7 +290,13 @@ public class UCropActivity extends AppCompatActivity {
             View.inflate(this, R.layout.ucrop_controls, photoBox);
 
             mWrapperStateAspectRatio = findViewById(R.id.state_aspect_ratio);
-            mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
+            // mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
+            mWrapperStateAspectRatio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    rotateByAngle(90);
+                }
+            });
             mWrapperStateRotate = findViewById(R.id.state_rotate);
             mWrapperStateRotate.setOnClickListener(mStateClickListener);
             mWrapperStateScale = findViewById(R.id.state_scale);
